@@ -7,23 +7,12 @@ Renames every folder to a random name
 Creates a log of each rename
 Restores original folder names using the log
 Only folder names are changed. Files are not touched.
-Example
-Before:
-HONOURS_testing/
-├── Victoria/
-│   ├── Rear/
-│   │   └── Day/
-After:
-HONOURS_testing/
-├── Pikachu/
-│   ├── Bulbasaur/
-│   │   └── Charmander/
 Log file
-A file called log.txt is created in the root directory.
-Each rename is stored as:
-/full/path/to/original
+A file called log.txt is created automatically.
+Each rename is stored in the log as:
+<original path>
 =
-/full/path/to/renamed
+<renamed path>
 This log is used to restore the original folder names.
 How to use
 Requirements
@@ -38,4 +27,4 @@ python obfuscate.py
 If no log exists, folders will be renamed and a log will be created.
 Decode (restore original names)
 Run the script again.
-If a log is found, you’ll be asked whether to restore the original names.
+If a log is found, the script will ask whether to restore the original names.
